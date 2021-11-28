@@ -1,0 +1,140 @@
+  
+  input[type = checkbox] {
+    display: none;
+  }
+  
+  input + label {
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--blue);
+    border-radius: 50%;
+    background: var(--darkblue);
+    transition: .1s all;
+    cursor: pointer;
+    z-index: 999 !important;
+  }
+  
+  input + label:hover {
+    transform: scale(.95);
+  }
+  
+  input + label:after {
+    content: "🤜";
+  }
+  
+  input:checked + label {
+    background: var(--blue);
+    transform: scale(1.1);
+  }
+  
+  input:checked + label:hover {
+    background: var(--blue);
+    transform: scale(1.05);
+  }
+  
+  input:checked + label:after {
+    content: "👍";
+  }
+
+  /* Pending Symbols*/
+  .status {
+    background: #fff;
+    margin-bottom: .25em;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .status {
+    position: relative;
+    height: 1em;
+    line-height: 1em;
+    padding: .5em;
+    padding-left: 2em;
+    transition: color 500ms;
+  }
+  .status:before, .status:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    transition: all 500ms;
+  }
+  .status.-pending {
+    color: #666;  
+  }
+  .status.-pending:before, .status.-pending:after {
+    background: #888;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .status.-pending:before {
+    width: .25em;
+    height: .25em;
+    top: .5em;
+    left: .875em;
+    border-radius: .125em;
+    transform-origin: 50% .5em;
+  }
+  .status.-pending:after {
+    width: .25em;
+    height: .25em;
+    top: 1.25em;
+    left: .875em;
+    border-radius: .125em;
+    transform-origin: 50% -.25em;
+  }
+  .status.-success {
+    color: #368;
+  }
+  .status.-success:before, .status.-success:after {
+    background: #6cf;
+    border-radius: .125em;
+  }
+  .status.-success:before {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform-origin: 50% .875em;
+    transform: translate(-.177em, -.11em) rotate(.125turn);
+  }
+  .status.-success:after {
+    width: .25em;
+    height: .5em;
+    top: 1em;
+    left: .875em;
+    transform-origin: 50% .375em;
+    transform: translate(-.177em, -.11em) rotate(-.125turn);
+  }
+  .status.-failure {
+    color: #802;
+  }
+  .status.-failure:before, .status.-failure:after {
+    background: #f04;
+    border-radius: .125em;
+  }
+  .status.-failure:before {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform: rotate(.125turn);
+  }
+  .status.-failure:after {
+    width: .25em;
+    height: 1em;
+    top: .5em;
+    left: .875em;
+    transform: rotate(-.125turn);
+  }
