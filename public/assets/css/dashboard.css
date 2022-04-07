@@ -285,7 +285,7 @@ nav .profile-details i{
   list-style: none;
   margin: 8px 0;
 }
-.sales-boxes .sales-details li a{
+.sales-boxes .sales-details li button{
   font-size: 18px;
   color: #333;
   font-size: 400;
@@ -296,7 +296,7 @@ nav .profile-details i{
   display: flex;
   justify-content: flex-end;
 }
-.sales-boxes .box .button a{
+.sales-boxes .box .button button{
   color: #fff;
   background: #0A2558;
   padding: 4px 12px;
@@ -305,6 +305,7 @@ nav .profile-details i{
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .sales-boxes .box .button a:hover{
   background:  #0d3073;
@@ -333,7 +334,7 @@ nav .profile-details i{
   margin-right: 10px;
   background: #333;
 }
-.sales-boxes .top-sales li a{
+.sales-boxes .top-sales li button{
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -615,3 +616,15 @@ nav .profile-details i{
   background-color: #111111;
 }
 
+
+/*Remove scroll from type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

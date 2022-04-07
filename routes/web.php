@@ -56,3 +56,6 @@ Route::post('updateuser',"App\Http\Controllers\updatedetails@updateuser");
 
 /* Update Basic Details */
 Route::post('updatebasic',"App\Http\Controllers\updatedetails@updatebasic");
+
+/* Generate Doc File */
+Route::post('generatedoc',"App\Http\Controllers\landing@generatedoc");

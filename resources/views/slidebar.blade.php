@@ -86,11 +86,11 @@
         <span class="dashboard">Dashboard</span>
       </div>
       <div class="search-box" style="max-width:300px">
-        <input id="comp_name" name="comp_name" type="text" placeholder="Company Name">
+        <input id="comp_name" name="comp_name" type="text" placeholder="Company Name" value="Gajanan Laser">
         
       </div>
       <div class="search-box" style="max-width:300px">
-        <input id="rec_name" name="rec_name" type="text" placeholder="Billed To">
+        <input id="rec_name" name="rec_name" type="text" placeholder="Billed To" required>
       </div>
       <div class="profile-details">
         <!--<img src="images/profile.jpg" alt="">-->

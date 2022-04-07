@@ -66,7 +66,8 @@
         </div>
       </div>
       
-      <form id="withgst" action="withgst" method="POST">
+      <form id="withgst" action="generatedoc" method="POST">
+        @csrf
       <div class="sales-boxes">
         <div class="recent-sales box">
           <div class="title">Particulars</div>
@@ -89,7 +90,7 @@
                 <tr>
                     <td>
                         <label class="field field_v1">
-                        <input class="field__input" name="Sno{{ $i }}"value="{{ $i }}">
+                        <input class="field__input" name="Sno{{ $i }}" value="{{ $i }}">
                         </label>
                     </td>
                     <td>
@@ -136,7 +137,7 @@
             </label>
           </div>
           <div class="button">
-            <a href="#" onclick="document.getElementById('withgst').submit();" >Submit</a>
+            <button href="#" type="submit" >Submit</button>
           </div>
           
           <!-- Basic Details -->
@@ -207,7 +208,7 @@
                 </span>
               </label>
               <label class="field field_v1">
-                <input class="field__input" name="InDate"value="{{ date('d-m-y') }}">
+                <input class="field__input" name="inDate"value="{{ date('d-m-y') }}">
                 <span class="field__label-wrap">
                   <span class="field__label">Date</span>
                 </span>
@@ -215,13 +216,13 @@
           </li>
           <li>
             <label class="field field_v1">
-                <input class="field__input" name="Challan">
+                <input class="field__input" name="challan">
                 <span class="field__label-wrap">
                   <span class="field__label">Challan No.</span>
                 </span>
               </label>
               <label class="field field_v1">
-                <input class="field__input" name="ChDate"value="{{ date('d-m-y') }}">
+                <input class="field__input" name="chDate"value="{{ date('d-m-y') }}">
                 <span class="field__label-wrap">
                   <span class="field__label">Date</span>
                 </span>
@@ -285,6 +286,37 @@
                 <input class="field__input" name="finalVal" readonly>
                 <span class="field__label-wrap">
                   <span class="field__label">Final Amount(Amount + Tax)</span>
+                </span>
+              </label>
+          </li>
+          </ul>
+          <div class="title">Bank Details</div>
+          <ul class="top-sales-details">
+            <li>
+                <label class="field field_v1">
+                    <input class="field__input" name="bank_name" required>
+                    <span class="field__label-wrap">
+                      <span class="field__label">Bank Name</span>
+                    </span>
+                  </label>
+                  <label class="field field_v1">
+                    <input class="field__input" name = "acc_name" required>
+                    <span class="field__label-wrap">
+                      <span class="field__label">Account Name</span>
+                    </span>
+                  </label>
+          </li>
+          <li>
+            <label class="field field_v1">
+                <input type="number" class="field__input" name="acc_num" required>
+                <span class="field__label-wrap">
+                  <span class="field__label">Current Account Number</span>
+                </span>
+              </label>
+              <label class="field field_v1">
+                <input type="text" class="field__input" name="ifsc_code" required >
+                <span class="field__label-wrap">
+                  <span class="field__label">Bank IFSC CODE</span>
                 </span>
               </label>
           </li>
