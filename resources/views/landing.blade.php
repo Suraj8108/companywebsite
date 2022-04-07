@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign up & Login Form</title>
-  <link  href="{{ url('/assets/css/landing.css') }}" rel="stylesheet" type="text/css">
-  <!--<link  href="{{ url('/assets/css/companylist.css') }}" rel="stylesheet" type="text/css">-->
+  <link  href="{{ asset('/assets/css/landing.css', env("secure")) }}" rel="stylesheet" type="text/css">
+  <!--<link  href="{{ asset('/assets/css/companylist.css', env("secure")) }}" rel="stylesheet" type="text/css">-->
 
 </head>
 <body>

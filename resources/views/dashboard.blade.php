@@ -4,13 +4,13 @@
   <head>
     <meta charset="UTF-8">
     <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
-    <link rel="stylesheet" href="{{ url('/assets/css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/dashboard.css', env("secure")) }}">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> 
-     <script src="{{ url('/assets/js/addrow.js') }}"></script>
+     <script src="{{ asset('/assets/js/addrow.js', env("secure")) }}"></script>
    </head>
 <body>
   @include("slidebar")
